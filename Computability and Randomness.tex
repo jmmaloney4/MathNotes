@@ -1,0 +1,38 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}	% Para caracteres en español
+%\usepackage{multirow,booktabs}
+\usepackage{geometry}
+
+\geometry{margin=0.5in, headsep=0.25in}
+
+\usepackage{math}
+
+\renewcommand{\P}[1]{{\Phi}_{#1}}
+\newcommand{\Pe}{\P{e}}
+\newcommand{\PP}[2]{ \P{#1} \Parens{#2} }
+\newcommand{\PeP}[1]{ \PP{e}{#1} }
+\newcommand{\Cvgs}[1]{{#1 \converges}}
+\newcommand{\Dvgs}[1]{{#1 \diverges}}
+
+
+\title{Notes on \textit{Computability and Randomness} by André Nies}
+\author{Jack Maloney}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section{The Complexity of Sets}
+
+\subsection{Computably Enumerable Sets}
+
+\begin{align}
+	W_e 
+	= \text{dom} \Parens{\Pe} 
+	= \Set{ i \in \N | \Cvgs{\PeP{i}} }
+\end{align}
+
+Then \( \Parens{W_e}_{e \in \N} \) is an effective listing of all c.e. sets.
+
+\end{document}
