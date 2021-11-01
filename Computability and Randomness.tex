@@ -38,4 +38,33 @@
 
 Then \( \Parens{W_e}_{e \in \N} \) is an effective listing of all c.e. sets.
 
+\subsubsection{The Halting Set}
+
+\begin{align}
+	\emptyset' = \Set{ e | e \in W_e }
+\end{align}
+
+This set is many-one equivalent to the following set:
+
+\begin{align}
+	H = \Set{ \braket{e, n} | \Cvgs{\PeP{n} } }
+\end{align}
+
+\begin{proof}
+	Given \( \braket{e,n} \in H \), by the parameter theorem we can effectively find \( \P{m} \simeq \PeP{n} \). Since \( \Cvgs{\PeP{n}} \), \( \Cvgs{ \P{m} } \). Thus \( W_m = \N \), so \( m \in W_m \), so \( m \in \emptyset' \). So \( H \, {\leq}_m \, \emptyset' \)\ by the computable function \( f(\braket{e, n}) = m \).
+	
+	Conversely, take \(e \in \emptyset' \). Then \( \Cvgs{\PeP{e}} \), so \( \braket{e,e} \in H \). So \( \emptyset' \, {\leq}_m \, H \) by the function \( f(e) = \braket{e,e} \).
+\end{proof}
+
+By Prop. 1.2.22, 
+
+\begin{align}
+	{\leq}_m \implies {\leq}_{tt} \implies {\leq}_{wtt} \implies {\leq}_{T}.  
+\end{align}
+
+So 
+\begin{align}
+	\emptyset' \equiv_m H \implies \emptyset' \equiv_T H.
+\end{align}
+
 \end{document}
